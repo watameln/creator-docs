@@ -7,8 +7,8 @@ Educational game design presents unique challenges and opportunities. For instan
 
 The topics covered include:
 
-- What are educational games and experiences? What are attributes of good experiences?
-- What is the recommended process of designing an educational game, and how does it contrast with traditional game development?
+- What are educational games and experiences? What are the attributes of good experiences?
+- What is the recommended process for designing an educational game, and how does it contrast with traditional game development?
 - What are recommendations for working with audiences such as schools or at-home learners? How do audiences differ in needs?
 
 Additional topics covered include:
