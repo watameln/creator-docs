@@ -3,7 +3,7 @@ title: Planning for Educational Settings
 description: Covers how to design educational games and experiences for classes and teachers. Includes information on user needs, common devices found in schools, and unique considerations like safety.
 ---
 
-Designing a Roblox experience for a classroom is similar to designing for traditional audiences - with a few additional considerations. When creating a game design document for education, there are differing user needs and classroom logistics to account for. This article covers both the processes and considerations for designing educational experiences on the Roblox platform for use within K-12 American classrooms.
+Designing a Roblox experience for a classroom is similar to designing for traditional audiences - with a few additional considerations. When creating a game design document for education, there are differing user needs and classroom logistics to account for. This article covers both the processes and considerations for designing educational experiences on the Roblox platform for use within K12 American classrooms.
 
 <Alert severity='info'>
 Note that this document will focus on design considerations for usage within a traditional school classroom, and may not apply to experiences meant for supplemental education, edutainment, or adult education markets.
@@ -17,11 +17,11 @@ These steps, though not in the traditional game design process, ensure that lear
 
 ### Starting with Learning Standards
 
-Many game designers start with a mechanic or idea. Educational game designers, instead, start with learning standards and objectives, then create gameplay that supports the learning.
+Many game designers start with a mechanic or idea. Educational game designers, instead, start with learning standards and objectives, and then create gameplay that supports the learning.
 
 Learning standards are concise descriptions of what a student is expected to know or do, such as: _"Apply Newton's Third Law to design a solution to a problem involving the motion of two colliding objects"_.
 
-In practice, standards are adopted by states and determine what concepts a teacher must cover in class. For teachers to adopt learning tools into their classroom, that tool will often need to adhere to specific standards sought by that educator.
+In practice, standards are adopted by states and determine what concepts a teacher must cover in class. For teachers to adopt learning tools into their classroom, that tools will often need to adhere to specific standards sought by that educator.
 
 An example of a science learning standard is below.
 
@@ -43,7 +43,7 @@ An example of a science learning standard is below.
 </table>
 
 <Alert severity='info'>
-Learning standards vary state-by-state, and even by country. For example, different states may teach Newtonian physics in different ways, but will share universal content similarities. For more details on locating relevant learning standards, a list of institutions offering standards is listed in [Additional Resources](#additional_resources).
+Learning standards vary state by state and even by country. For example, different states may teach Newtonian physics in different ways but will share universal content similarities. For more details on locating relevant learning standards, a list of institutions offering standards is listed in [Additional Resources](#additional_resources).
 </Alert>
 
 ### Defining Learning Standards
@@ -59,7 +59,7 @@ Within the design process for an educational experience, standards will serve as
    _Example: [HS-PS2-1](https://www.nextgenscience.org/pe/hs-ps2-1-motion-and-stability-forces-and-interactions): Analyze data to support the claim that Newton's second law of motion describes the mathematical relationship among the net force on a macroscopic object, its mass, and its acceleration._
 
    <Alert severity='info'>
-   The learning standard above is from the institution Next Generation Science Standards. Viewing the standard provides more detail on how to implement it in classrooms, which can serve as inspiration for gameplay.
+   The learning standard above is from the institution's Next Generation Science Standards. Viewing the standard provides more detail on how to implement it in classrooms, which can serve as inspiration for gameplay.
    </Alert>
 
 ### Connecting Learning with Gameplay
@@ -70,7 +70,7 @@ Objectives are **specific** and **measurable**. When written, the objective brea
 
 To continue the design process, we recommend the following:
 
-1. Write **learning objective(s)** for the experience that align with the learning standard.
+1. Write **learning objective(s)** for the experience that aligns with the learning standard.
 
    _Example: After completing the experience, users will be able to determine the probability of offspring with specific and desired traits._
 
@@ -375,7 +375,7 @@ Below are resources for learning more about learning standards, creating lesson 
 
 #### Finding Learning Standards
 
-Designers can reference these educational institutions to find standards that align to their experience's target age and topic.
+Designers can reference these educational institutions to find standards that align with their experience's target age and topic.
 
 - [Next Generation Science Standards](https://www.nextgenscience.org/) - Respected standards for science education that are commonly adopted within United States classrooms.
 - [Common Core](https://learning.ccsso.org/common-core-state-standards-initiative) - English and Math standards, often adjusted on a state-by-state (United States) basis.
