@@ -9,7 +9,7 @@ comments: |
   This guide covers server-side chat modules of the legacy chat system, which is deprecated and no longer onboarding new users in favour of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService` , see <a href="../../chat/customizing-in-experience-text-chat.md">In-Experience Text Chat</a>.
 </Alert>
 
-You can use the following chat modules to support server-side behaviors of the [Legacy Chat System](../../chat/legacy/legacy-chat-system.md#message-creator-modules) including:
+You can use the following chat modules to support server-side behaviours of the [Legacy Chat System](../../chat/legacy/legacy-chat-system.md#message-creator-modules) including:
 
 - [ChatService](#chatservice): A singleton that manages all other chat modules.
 - [ChatSpeaker](#chatspeaker): An entity that may create messages in a ChatChannel; each `Player` will automatically have a ChatSpeaker and bots may chat by creating ChatSpeakers.
@@ -18,7 +18,7 @@ You can use the following chat modules to support server-side behaviors of the [
 
 ## ChatService
 
-**ChatService** is a singleton object that handles the server-side behavior of the Lua Chat System, such as [ChatChannels](#chatchannel) and [ChatSpeakers](#chatspeaker).
+**ChatService** is a singleton object that handles the server-side behaviour of the Lua Chat System, such as [ChatChannels](#chatchannel) and [ChatSpeakers](#chatspeaker).
 
 All `ModuleScript` s within the **ChatModules** folder should return a function, and that function will be called with the ChatService singleton.
 
