@@ -20,8 +20,8 @@ Generally speaking, we look for content that conforms to our existing standards 
 
 When you submit a pull request for review, you must agree to the following:
 
-- This contribution was created in whole or in part by me, and I have the right to submit it under the terms of this repository's open source licenses.
-- I understand and agree that this contribution and a record of it are public, maintained indefinitely, and may be redistributed under the terms of this repository's open source licenses.
+- This contribution was created in whole or in part by me, and I have the right to submit it under the terms of this repository's open-source licenses.
+- I understand and agree that this contribution and a record of it are public, maintained indefinitely, and may be redistributed under the terms of this repository's open-source licenses.
 - To the best of my knowledge, all proposed changes are accurate.
 
 ## Minor Contributions
@@ -83,7 +83,7 @@ The Roblox documentation has three main document types:
 
 - Tutorials in `.md` files in [content/en-us/tutorials](./content/en-us/tutorials)
 
-  Compared to task-based guides, tutorials are more self-contained and take you from _nothing_ to _something_. This focus on creating something specific means they're typically much more prescriptive than guides. Tutorials often touch multiple features and concepts at the same time, demonstrating the connections between tools and strategies.
+  Compared to task-based guides, tutorials are more self-contained and take you from _nothing_ to _something_. This focus on creating something specific means they're typically much more prescriptive than guides. Tutorials often touch on multiple features and concepts at the same time, demonstrating the connections between tools and strategies.
 
 If your contribution doesn't fit within these categories or covers a particularly narrow subject, it might not be a good fit for the documentation. Consider posting it to the [Roblox developer forum](https://devforum.roblox.com/c/resources/71).
 
