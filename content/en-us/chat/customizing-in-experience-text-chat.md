@@ -7,7 +7,7 @@ The [in-experience text chat system](../chat/in-experience-text-chat.md) powered
 
 ## Chat Window Configuration
 
-You can toggle appearance of the **chat window** and **input bar** in one of two ways:
+You can toggle the appearance of the **chat window** and **input bar** in one of two ways:
 
 - Directly in Studio by toggling the **Enabled** property of the service's **ChatWindowConfiguration** and **ChatInputBarConfiguration** children.
 
