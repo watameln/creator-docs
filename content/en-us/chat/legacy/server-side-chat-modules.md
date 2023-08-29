@@ -2,11 +2,11 @@
 title: Server-Side Chat Modules
 description: Server-side chat modules allow you to extend and customize the deprecated legacy chat.
 comments: |
-  1. This guide is intentionally not available in the nav list, but still searchable for users who want to use the legacy chat system.
+  1. This guide is intentionally not available in the nav list but is still searchable for users who want to use the legacy chat system.
 ---
 
 <Alert severity="error">
-  This guide covers server-side chat modules of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService` , see <a href="../../chat/customizing-in-experience-text-chat.md">In-Experience Text Chat</a>.
+  This guide covers server-side chat modules of the legacy chat system, which is deprecated and no longer onboarding new users in favour of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService` , see <a href="../../chat/customizing-in-experience-text-chat.md">In-Experience Text Chat</a>.
 </Alert>
 
 You can use the following chat modules to support server-side behaviors of the [Legacy Chat System](../../chat/legacy/legacy-chat-system.md#message-creator-modules) including:
@@ -360,14 +360,14 @@ A **ChatMessage** is a data structure representing a message sent from a [ChatSp
 
 **ChatChannel** is an object that stores data about a single channel, which is a means by which messages can be exchanged between [ChatSpeakers](#chatspeaker). It also has access permission properties that determine the visibility of messages along with whether users may join or leave the channel manually (using `/join` or `/leave` commands).
 
-By default, each user has a [ChatSpeaker](#chatspeaker) that is automatically added to the "All" and "System" chat channels (although, "System" is read only). If the user is on a `Player.Team`, they will also have access to a channel for only that Team.
+By default, each user has a [ChatSpeaker](#chatspeaker) that is automatically added to the "All" and "System" chat channels (although, "System" is read-only). If the user is on a `Player.Team`, they will also have access to a channel for only that Team.
 
 ### Properties
 
 #### Name
 
 - **Type:** `Library.string`
-- **Description:** The name of the channel, used to reference the channel in other functions.
+- **Description:** The name of the channel, is used to reference the channel in other functions.
 
 #### WelcomeMessage
 
@@ -387,7 +387,7 @@ By default, each user has a [ChatSpeaker](#chatspeaker) that is automatically ad
 #### AutoJoin
 
 - **Type:** [bool](../../luau/booleans.md)
-- **Description:** Determines whether a player's [ChatSpeaker](#chatspeaker) will automatically join the channel upon joining the game. non-user speakers will not automatically join channels, even when this property is true (You can use [ChatSpeaker:JoinChannel()](#joinchannel) to do this).
+- **Description:** Determines whether a player's [ChatSpeaker](#chatspeaker) will automatically join the channel upon joining the game. Non-user speakers will not automatically join channels, even when this property is true (You can use [ChatSpeaker:JoinChannel()](#joinchannel) to do this).
 
 #### Private
 
