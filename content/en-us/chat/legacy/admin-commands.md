@@ -2,24 +2,24 @@
 title: Admin Commands
 description: Create custom admin commands for the deprecated legacy chat.
 comments: |
-  1. This guide is intentionally not available in the nav list, but still searchable for users who want to use the legacy chat system.
+  1. This guide is intentionally not available in the nav list, but is still searchable for users who want to use the legacy chat system.
 ---
 
 <Alert severity="error">
-  This guide covers admin commands of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see <a href="../../chat/customizing-in-experience-text-chat.md#creating-custom-commands">In-Experience Text Chat</a> for creating custom chat commands.
+  This guide covers admin commands of the legacy chat system, which is deprecated and no longer onboarding new users in favour of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see <a href="../../chat/customizing-in-experience-text-chat.md#creating-custom-commands">In-Experience Text Chat</a> for creating custom chat commands.
 </Alert>
 
-An **admin command** is a keyword or phrase that a user with certain level of control can type into the chat window to trigger an action. This library uses chat modules, which allows for easy implementation of admin commands on top of the legacy chat system. Chat modules listen to incoming messages on the server and can execute actions based on whatever criteria is desired.
+An **admin command** is a keyword or phrase that a user with a certain level of control can type into the chat window to trigger an action. This library uses chat modules, which allows for easy implementation of admin commands on top of the legacy chat system. Chat modules listen to incoming messages on the server and can execute actions based on whatever criteria is desired.
 
 ## Setup
 
-Whenever a Roblox place loads it checks if the Chat service is empty. If it does not find the components it needs, the place will insert the latest version of those components. This means that overwriting or making changes to these components in a experience will prevent them from being updated.
+Whenever a Roblox place loads it checks if the Chat service is empty. If it does not find the components it needs, the place will insert the latest version of those components. This means that overwriting or making changes to these components in an experience will prevent them from being updated.
 
 The first step in setting up the admin commands library is to add a new Chat Module to the Chat service. The library in this tutorial takes care of the heavy lifting done by a Chat Module so the only object you need to add to the Chat service is a new `Class.ModuleScript` . The name of your module script can be anything, but I suggest something intuitive like `AdminCommands`.
 
 ## Implementing New Commands
 
-Rather than implementing most of the Chat Module logic you will simply require the library module that does a bulk of the work and adds extra functionality. The simplest way to add the library into your module is to require it by its assetId at the top of your script.
+Rather than implementing most of the Chat Module logic, you will simply require the library module that does a bulk of the work and adds extra functionality. The simplest way to add the library into your module is to require it by its assetId at the top of your script.
 
 ```lua
 ​local AdminCommands = require(1163352238)
@@ -231,7 +231,7 @@ SetGroupRankPermission(number requesterUserId, number targetGroupId, number targ
 
 ## Quick-Start Module
 
-For easier setup you can also use this [Quick Start](https://www.roblox.com/library/1163353653/Quick-Start-Admin-Commands), which is a module that has already implemented the Admin Commands library. The model is a module with the same format as described above. Additionally, the module has a few commands already included so that you do not have to re-implement.
+For easier setup, you can also use this [Quick Start](https://www.roblox.com/library/1163353653/Quick-Start-Admin-Commands), which is a module that has already implemented the Admin Commands library. The model is a module with the same format as described above. Additionally, the module has a few commands already included so that you do not have to re-implement.
 
 | Command/Binding                  | Spoken Parameter                 |
 | -------------------------------- | -------------------------------- |
