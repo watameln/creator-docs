@@ -39,12 +39,12 @@ Before starting a Roblox classroom, create guidelines like the ones below for st
 
 ### Conflict Resolution
 
-Help students independently resolve conflict by modeling and teaching them the tips below.
+Help students independently resolve conflict by modelling and teaching them the tips below.
 
 - Encourage **"I" messages** _("I feel …")_ rather than **"you" messages**
   _("You did …")_. This helps both sides listen.
 - Have students take turns speaking without interruption. If a student wants to interrupt, prompt them to take a deep breath or do a small private hand gesture (e.g. tap themselves on the thumb) to signal they should focus.
-- When trying to find a resolution to a conflict, talk about interests and goals _("I feel this would look better blue")_, rather than positions _("You're wrong, blue is the best color …")_. Sharing interests and goals gives students something concrete to try resolving conflict.
+- When trying to find a resolution to a conflict, talk about interests and goals _("I feel this would look better blue")_, rather than positions _("You're wrong, blue is the best color …")_. Sharing interests and goals gives students something concrete to try to resolve conflict.
 
 ## Collaboration Strategies
 
@@ -52,7 +52,7 @@ One way of creating a positive learning environment is to use strategies that fo
 
 ### Students Helping One Another
 
-Strategies that encourage students to work together builds indepdencencs and makes collabration feel more natural.
+Strategies that encourage students to work together build independence and make collaboration feel more natural.
 
 #### Help Students Help Themselves
 
@@ -60,7 +60,7 @@ Strategies that encourage students to work together builds indepdencencs and mak
 
 #### Reward Sharing
 
-- Allow students to contribute by letting them lead **skill-shares**. If a student discovers something fun, or has a skill they want to share, give them 5-10 minutes during an independent work time to lead a tutorial. This encourages an atmosphere of sharing and rewards students for wanting to help others.
+- Allow students to contribute by letting them lead **skill-shares**. If a student discovers something fun or has a skill they want to share, give them 5-10 minutes during independent work time to lead a tutorial. This encourages an atmosphere of sharing and rewards students for wanting to help others.
 
 ### Facilitating Groups
 
@@ -72,7 +72,7 @@ One way of having collaboration is often through group work. To ensure group wor
 
 #### Having Groups Manage a "To-Do" List
 
-- To ensure all group members are busy, have a group collectively manage a to-do list. If someone has an idea or task, they can add it onto the list for someone who needs something to work on.
+- To ensure all group members are busy, have a group collectively manage a to-do list. If someone has an idea or task, they can add it to the list for someone who needs something to work on.
 
 ## Further Reading
 
