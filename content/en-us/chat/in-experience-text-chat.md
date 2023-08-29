@@ -9,7 +9,7 @@ This guide covers the chat workflow and the usage of APIs for extending the func
 
 ## Text Chat APIs and Workflow
 
-The in-experience text chat system consists of both mutable APIs that you can extend for customized chat delivery behaviors and immutable data objects representing certain chat elements returned by mutable APIs.
+The in-experience text chat system consists of both mutable APIs that you can extend for customized chat delivery behaviours and immutable data objects representing certain chat elements returned by mutable APIs.
 
 ### Mutable Chat APIs
 
@@ -17,7 +17,7 @@ The in-experience text chat system provides the following mutable APIs:
 
 - `Class.TextChatService`: This singleton class is responsible for managing the overall chat system, including handling chat message filtering, moderation, and user permissions. Accessible from the server, it provides a set of methods and events that other text chat APIs or user actions can invoke through the chat delivery workflow.
 - `Class.TextChannel`:This server-side class represents a text chat channel and passes user-sent chat messages from the client to the server and displays them to other users based on permissions. You can use it to create, modify, and manage text channels in your experience. Additionally, you can create multiple text channels to group users together for chat purposes, such as allowing users to chat with their group members that are not visible to others.
-- `Class.TextChatCommand`: This class enables you to create custom chat commands that allow users to invoke specific actions or behaviors by typing special characters followed by a command name. Chat commands are helpful for adding additional functionality and interactivity to the chat experience. You can also use them to create admin commands to manage and moderate your experience with shortcuts.
+- `Class.TextChatCommand`: This class enables you to create custom chat commands that allow users to invoke specific actions or behaviours by typing special characters followed by a command name. Chat commands are helpful for adding additional functionality and interactivity to the chat experience. You can also use them to create admin commands to manage and moderate your experience with shortcuts.
 
 ### Immutable Chat Objects
 
