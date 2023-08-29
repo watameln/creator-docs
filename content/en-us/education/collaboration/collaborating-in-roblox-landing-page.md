@@ -69,7 +69,7 @@ These handouts can be printed out and distributed to your class.
 
 <h4>Collaboration Guidelines</h4>
 
-Provide students a resource so they can help others and independently resolve
+Provide students with a resource so they can help others and independently resolve
 conflict.
 
 <a
