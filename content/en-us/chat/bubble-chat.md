@@ -21,7 +21,7 @@ To enable bubble chat in your experience:
 
 ## Bubble Customization
 
-After enabling bubble chat, you can customize the appearance and behavior of your chat bubbles to match your experience theme. Use the [Properties](../studio/properties.md) window of **BubbleChatConfiguration** for [basic](#basic-customization) changes like text color and spacing. For [advanced](#advanced-customization) customization, such as adding background images for bubbles, add UI objects as children of **BubbleChatConfiguration** and then modify these objects.
+After enabling bubble chat, you can customize the appearance and behaviour of your chat bubbles to match your experience theme. Use the [Properties](../studio/properties.md) window of **BubbleChatConfiguration** for [basic](#basic-customization) changes like text colour and spacing. For [advanced](#advanced-customization) customization, such as adding background images for bubbles, add UI objects as children of **BubbleChatConfiguration** and then modify these objects.
 
 <img src="../assets/ui/in-experience-text-chat/TextChatService-BubbleChatConfiguration.png" width="320" />
 
