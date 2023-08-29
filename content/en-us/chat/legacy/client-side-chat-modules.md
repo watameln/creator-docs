@@ -2,14 +2,14 @@
 title: Client-Side Chat Modules
 description: Client-side chat modules allow you to extend and customize the deprecated legacy chat.
 comments: |
-  1. This guide is intentionally not available in the nav list, but still searchable for users who want to use the legacy chat system.
+  1. This guide is intentionally not available in the nav list but is still searchable for users who want to use the legacy chat system.
 ---
 
 <Alert severity="error">
-  This guide covers client-side chat modules of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see <a href="../../chat/customizing-in-experience-text-chat.md">In-Experience Text Chat</a>.
+  This guide covers client-side chat modules of the legacy chat system, which is deprecated and no longer onboarding new users in favour of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see <a href="../../chat/customizing-in-experience-text-chat.md">In-Experience Text Chat</a>.
 </Alert>
 
-You can use the following chat modules to support client-side behaviors of the [Legacy Chat System](../../chat/legacy/legacy-chat-system.md#message-creator-modules).
+You can use the following chat modules to support client-side behaviours of the [Legacy Chat System](../../chat/legacy/legacy-chat-system.md#message-creator-modules).
 
 ## ChatWindow
 
@@ -50,7 +50,7 @@ The **ChatWindow** is the main chat module of the Legacy Chat System's client si
 #### GetVisible
 
 - **Parameters:** None
-- **Description:** Returns whether the window is visible or not. Note: this refers to the chat UI in general; when the chat window fades to transparent due to inactivity, the window is still considered visible.
+- **Description:** Returns whether the window is visible or not. Note: This refers to the chat UI in general; when the chat window fades to transparent due to inactivity, the window is still considered visible.
 - **Returns:** [bool](../../luau/booleans.md)
 
 #### SetVisible
@@ -62,25 +62,25 @@ The **ChatWindow** is the main chat module of the Legacy Chat System's client si
 #### FadeOutBackground
 
 - **Parameters:** [float](../../luau/numbers.md#float): `duration`
-- **Description:** Fades out the background over the given `duration` in seconds. Note: later calls to control fading in/out will override earlier calls.
+- **Description:** Fades out the background over the given `duration` in seconds. Note: Later calls to control fading in/out will override earlier calls.
 - **Returns:** void
 
 #### FadeInBackground
 
 - **Parameters:** [float](../../luau/numbers.md#float): `duration`
-- **Description:** Fades in the background over the given `duration` in seconds. Note: later calls to control fading in/out will override earlier calls.
+- **Description:** Fades in the background over the given `duration` in seconds. Note: Later calls to control fading in/out will override earlier calls.
 - **Returns:** void
 
 #### FadeOutText
 
 - **Parameters:** [float](../../luau/numbers.md#float): `duration`
-- **Description:** Fades out the text over the given `duration` in seconds. Note: later calls to control fading in/out will override earlier calls.
+- **Description:** Fades out the text over the given `duration` in seconds. Note: Later calls to control fading in/out will override earlier calls.
 - **Returns:** void
 
 #### FadeInText
 
 - **Parameters:** [float](../../luau/numbers.md#float): `duration`
-- **Description:** Fades in the text over the given `duration` in seconds. Note: later calls to control fading in/out will override earlier calls.
+- **Description:** Fades in the text over the given `duration` in seconds. Note: Later calls to control fading in/out will override earlier calls.
 - **Returns:** void
 
 ## ChatBar
@@ -179,25 +179,25 @@ The **ChatBar** handles client-side text entry for the Lua Chat System. There ar
 #### FadeOutBackground
 
 - **Parameters:** [float](../../luau/numbers.md#float): `duration` `duration`
-- **Description:** Fades out the background over the given `duration` in seconds. Note: later calls to control fading in/out will override earlier calls.
+- **Description:** Fades out the background over the given `duration` in seconds. Note: Later calls to control fading in/out will override earlier calls.
 - **Returns:** void
 
 #### FadeInBackground
 
 - **Parameters:** [float](../../luau/numbers.md#float): `duration` `duration`
-- **Description:** Fades in the background over the given `duration` in seconds. Note: later calls to control fading in/out will override earlier calls.
+- **Description:** Fades in the background over the given `duration` in seconds. Note: Later calls to control fading in/out will override earlier calls.
 - **Returns:** void
 
 #### FadeOutText
 
 - **Parameters:** [float](../../luau/numbers.md#float): `duration` `duration`
-- **Description:** Fades out the text over the given `duration` in seconds. Note: later calls to control fading in/out will override earlier calls.
+- **Description:** Fades out the text over the given `duration` in seconds. Note: Later calls to control fading in/out will override earlier calls.
 - **Returns:** void
 
 #### FadeInText
 
 - **Parameters:** [float](../../luau/numbers.md#float): `duration` `duration`
-- **Description:** Fades in the text over the given `duration` in seconds. Note: later calls to control fading in/out will override earlier calls.
+- **Description:** Fades in the text over the given `duration` in seconds. Note: Later calls to control fading in/out will override earlier calls.
 - **Returns:** void
 
 ## ChatChannelUI
@@ -258,13 +258,13 @@ The **ChatMessageLogDisplay** manages the rendering of [ChatMessages](../../chat
 #### FadeOutText
 
 - **Parameters:** [float](../../luau/numbers.md#float) `duration`
-- **Description:** Fades out the text over the given `duration` in seconds. Note: later calls to control fading in/out will override earlier calls.
+- **Description:** Fades out the text over the given `duration` in seconds. Note: Later calls to control fading in/out will override earlier calls.
 - **Returns:** void
 
 #### FadeInText
 
 - **Parameters:** [float](../../luau/numbers.md#float) `duration`
-- **Description:** Fades in the text over the given `duration` in seconds. Note: later calls to control fading in/out will override earlier calls.
+- **Description:** Fades in the text over the given `duration` in seconds. Note: Later calls to control fading in/out will override earlier calls.
 - **Returns:** void
 
 ## ChatCustomState
@@ -301,7 +301,7 @@ Whisper chat and team chat use ChatCustomState to indicate to the player where t
 
 ## ChatSettings
 
-The **ChatSettings** is a dictionary of settings for the client-side of the Lua Chat System. They are stored in a `ModuleScript` named _ChatSettings_ , which can be found inside of the `Chat` game service, under the `Folder` named _ClientChatModules_ . The module may be required and its properties can be cahgned during run-time.
+The **ChatSettings** is a dictionary of settings for the client side of the Lua Chat System. They are stored in a `ModuleScript` named _ChatSettings_ , which can be found inside of the `Chat` game service, under the `Folder` named _ClientChatModules_ . The module may be required and its properties can be changed during run-time.
 
 To change a setting, require this module using a `LocalScript` in the following manner:
 
@@ -338,7 +338,7 @@ ChatSettings.MaximumMessageLength = 100
 
 - **Type:** [bool](../../luau/booleans.md)
 - **Default:** `true`
-- **Description:** Determines whether players should see the filtered version of their chat messages, or the original content they typed in.
+- **Description:** Determines whether players should see the filtered version of their chat messages or the original content they typed in.
 
 #### ChatOnWithTopBarOff
 
