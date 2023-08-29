@@ -2,11 +2,11 @@
 title: Legacy Chat System
 description: Explains how to use and fork the deprecated Legacy Chat System for your experience on Roblox.
 comments: |
-  1. This guide is intentionally not available in the nav list, but still searchable for users who want to use the legacy chat system.
+  1. This guide is intentionally not available in the nav list, but is still searchable for users who want to use the legacy chat system.
 ---
 
 <Alert severity="error">
-  This guide covers basics of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see <a href="../../chat/customizing-in-experience-text-chat.md">In-Experience Text Chat</a>.
+  This guide covers the basics of the legacy chat system, which is deprecated and no longer onboarding new users in favour of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see <a href="../../chat/customizing-in-experience-text-chat.md">In-Experience Text Chat</a>.
 </Alert>
 
 You can set up the **Legacy Chat System** to enable users to quickly and easily communicate using text on different platforms.
@@ -15,7 +15,7 @@ You can set up the **Legacy Chat System** to enable users to quickly and easily 
 
 The chat system uses the [client-server model](../../projects/client-server.md). Server-side chat module components [ChatChannel](../../chat/legacy/server-side-chat-modules.md#chatchannel) and [ChatSpeaker](../../chat/legacy/server-side-chat-modules.md#chatspeaker) management is handled by the [ChatService](../../chat/legacy/server-side-chat-modules.md#chatservice) on the server, while the client is responsible for input and the display of messages. Communication between the server and clients is handled automatically using `Class.RemoteEvent|RemoteEvents`.
 
-The `Class.Chat` engine ervice itself is the essential storage unit for the chat system: when a Roblox place loads (either in Client or in Studio when running or playing), all of the components of the chat system are automatically loaded into `Class.Chat` service if `Class.Chat.LoadDefaultChat` is true. Legacy Chat System loads the following hierarchy:
+The `Class.Chat` engine service itself is the essential storage unit for the chat system: when Roblox place loads (either in Client or in Studio when running or playing), all of the components of the chat system are automatically loaded into `Class.Chat` service if `Class.Chat.LoadDefaultChat` is true. Legacy Chat System loads the following hierarchy:
 
 - **ChatModules** - This `Class.Folder` is a collection of modules that are required by the **ChatServiceRunner**. All of the contents of this folder are required by the script and are used to create custom behavior on the server.
 - **ClientChatModules** - This folder contains various `Class.ModuleScript` s required by the **ChatScript**.
@@ -23,13 +23,13 @@ The `Class.Chat` engine ervice itself is the essential storage unit for the chat
   - **MessageCreatorModules** - Contains modules used to handle and format messages.
   - **ChatConstants** - Contains constants shared by the server and client.
   - **ChatSettings** - Stores various settings to configure different aspects of the [ChatWindow](../../chat/legacy/client-side-chat-modules.md#chatwindow).
-- **ChatLocalization** - Data structure that stores text translations.
-- **ChatServiceRunner** - This `Class.Script` runs the server component of the chat. In general this does not need to be modified to create custom chat behavior and functionality. When the experience runs this gets cloned automatically into the `Class.ServerScriptService`.
-  `InsertDefaultModules` with value true, adding a **ChatModules** folder to your experience will automatically disable whisper chat and colored names.
+- **ChatLocalization** - A data structure that stores text translations.
+- **ChatServiceRunner** - This `Class.Script` runs the server component of the chat. In general, this does not need to be modified to create custom chat behavior and functionality. When the experience runs this gets cloned automatically into the `Class.ServerScriptService`.
+  `InsertDefaultModules` with the value true, adding a **ChatModules** folder to your experience will automatically disable whisper chat and coloured names.
 - **BubbleChat** - Displays user chat messages above their in-game avatar (if enabled).
 - **ChatScript** - This `Class.LocalScript` runs the client component of the chat. Like ChatServiceRunner, this should not need to be modified to customize chat. When the game runs this gets cloned automatically to the `Class.StarterPlayerScripts` .
 
-If a **ChatModules** Folder already exists in the `Class.Chat` engine service, the default chat modules (which implement whisper chat, colored names among other features) won't be inserted. To force insertion of default chat modules, insert a `Class.BoolValue` named **InsertDefaultModules** with `Class.BoolValue.Value` as `true` into the folder.
+If a **ChatModules** Folder already exists in the `Class.Chat` engine service, the default chat modules (which implement whisper chat, coloured names among other features) won't be inserted. To force insertion of default chat modules, insert a `Class.BoolValue` named **InsertDefaultModules** with `Class.BoolValue.Value` as `true` into the folder.
 
 ## Modifying (Forking) the Lua Chat System
 
@@ -48,15 +48,15 @@ When making a copy of ("forking") the current Lua Chat System version in this ma
 
 ## Chat Workflow
 
-Before making modules to customize the chat, it is important to understand the workflow that a chat message goes through. Along with sending text messages, there are various commands built into the chat system, so every message has to be checked to see if they need to be interpreted as a command or just a text message. Even text messages can be modified and filtered in the process.
+Before making modules to customize the chat, it is important to understand the workflow that a chat message goes through. Along with sending text messages, there are various commands built into the chat system, so every message has to be checked to see if it needs to be interpreted as a command or just a text message. Even text messages can be modified and filtered in the process.
 
-After a user has focus in the chat input and enters a character, several checks are made right away on the Client. If the character is **Escape** the input box closes and no actions are taken. If the character is anything other than **Enter** the text gets passed through **In-Progress** command processors. These are used to evaluate the text to see if any action needs to be taken. For example, when a user starts whispering with the `/whisper` command, as soon as a user name has been entered after the command, the input box changes to indicate that the user is now entering in a whisper channel.
+After a user has focused on the chat input and enters a character, several checks are made right away on the Client. If the character is **Escape** the input box closes and no actions are taken. If the character is anything other than **Enter** the text gets passed through **In-Progress** command processors. These are used to evaluate the text to see if any action needs to be taken. For example, when a user starts whispering with the `/whisper` command, as soon as a user name has been entered after the command, the input box changes to indicate that the user is now entering a whisper channel.
 
 On the client side of chat, there are two types of processors: [In-Progress](#in-progress-commands) and [Completed](#completed-message-commands). **In-Progress** evaluates after every character has been typed, and **Completed** only evaluates when the user has finished typing and has hit **Enter**.
 
-When the user finishes typing and hits **Enter** the text, their input is sent through several more command processors. If an **In-Progress** command made a custom chat state, the chat checks the state to see if a final command should be executed and if the message should continue on. If the message is allowed to continue, then the text is sent through another set of processors called **Completed** processors. If any of these processors return true, the message stops being sent. Otherwise, the message is sent to the server.
+When the user finishes typing and hits **Enter** the text, their input is sent through several more command processors. If an **In-Progress** command makes a custom chat state, the chat checks the state to see if a final command should be executed and if the message should continue. If the message is allowed to continue, then the text is sent through another set of processors called **Completed** processors. If any of these processors return true, the message stops being sent. Otherwise, the message is sent to the server.
 
-Once the message reaches the server, it goes through another set of command processors. Just like the "Completed" processors on the client, if any of these processors return true, then the message stops executing. Otherwise the message gets passed through a set of filters (including the default Roblox chat filter). Once all of this is done the message is sent to all of the Channels and appropriate Speakers.
+Once the message reaches the server, it goes through another set of command processors. Just like the "Completed" processors on the client, if any of these processors return true, then the message stops executing. Otherwise, the message gets passed through a set of filters (including the default Roblox chat filter). Once all of this is done the message is sent to all of the Channels and appropriate Speakers.
 
 ## Server Modules
 
@@ -130,11 +130,11 @@ return Run
 
 ### Command Functions
 
-Another powerful thing that **ChatModules** can do are chat commands. When a message is sent to the server, the chat will send the message through each command function that has been registered to the [ChatService](../../chat/legacy/server-side-chat-modules.md#chatservice) and relevant Channel. These functions are sent the speaker, message, and channel that the message is being sent to. The function can take any action that it needs to and then return true or false. If the function returns true, then the message stops being processed by the chat system. It will not be sent to any more command functions nor will it be displayed in the chat window. If the function returns false, then the message continues through all of the other command functions. If none of the command functions returns true, the message will then be sent through filters and then will be displayed.
+Another powerful thing that **ChatModules** can do is chat commands. When a message is sent to the server, the chat will send the message through each command function that has been registered to the [ChatService](../../chat/legacy/server-side-chat-modules.md#chatservice) and relevant Channel. These functions are sent to the speaker, message, and channel that the message is being sent to. The function can take any action that it needs to and then return true or false. If the function returns true, then the message stops being processed by the chat system. It will not be sent to any more command functions nor will it be displayed in the chat window. If the function returns false, then the message continues through all of the other command functions. If none of the command functions returns true, the message will then be sent through filters and then will be displayed.
 
 Command Functions are often used to implement [Admin Commands](../../chat/legacy/admin-commands.md), which are text commands that certain users can use to manipulate the experience state through specific text said in the chat.
 
-In this example a **ChatModule** is used to create a `Class.Part` if a user types `/part` in the chat. Note that this function returns true if a Part was created which will stop the message from proceeding and no message will be displayed. If a part is not created, this function needs to return false so that the message can continue working through the system.
+In this example, a **ChatModule** is used to create a `Class.Part` if a user types `/part` in the chat. Note that this function returns true if a Part was created which will stop the message from proceeding and no message will be displayed. If a part is not created, this function needs to return false so that the message can continue working through the system.
 
 ```lua
 local function Run(ChatService)
@@ -157,7 +157,7 @@ Both [ChatChannels](../../chat/legacy/server-side-chat-modules.md#chatchannel) a
 
 ### Filter Functions
 
-Messages that are not stopped by a Command Function will go through all of the filter functions that are registered to the [ChatService](../../chat/legacy/server-side-chat-modules.md#chatservice) and relevant Channels. Each filter function is passed the speaker, message object, and channel name. Any changes made to the message object will persist and each following filter function will see the updated message. Note that unlike a command function, filter functions do not need to return a value.
+Messages that are not stopped by a Command Function will go through all of the filter functions that are registered to the [ChatService](../../chat/legacy/server-side-chat-modules.md#chatservice) and relevant Channels. Each filter function is passed the speaker, message object, and channel name. Any changes made to the message object will persist and each following filter function will see the updated message. Note that, unlike a command function, filter functions do not need to return a value.
 
 In this example, a simple filter function is registered to make every message appear in lowercase.
 
@@ -175,7 +175,7 @@ return Run
 
 ## Client Modules
 
-Modules put into ClientChatModules can be used to make custom behavior for clients. These modules are divided into two different folders: CommandModules and MessageCreatorModules.
+Modules put into ClientChatModules can be used to make custom behaviour for clients. These modules are divided into two different folders: CommandModules and MessageCreatorModules.
 
 <Alert severity="info">
 For spec on client-side chat module components such as **ChatWindow** and **ChatBar**, see [Client-Side Chat Modules](../../chat/legacy/client-side-chat-modules.md).
@@ -183,7 +183,7 @@ For spec on client-side chat module components such as **ChatWindow** and **Chat
 
 ### Command Modules
 
-CommandModules work very similarly to modules on the server that register [Command functions](#command-functions). These modules define functions that will fire after the user has entered in text. That text can be read and the command can either let the message through to the server or stop the progress of the message. The main difference is that CommandModules can be evaluated either when the user has hit **Enter**, or after every character as they are typed. Commands that are evaluated at the end of the message are tagged with **COMPLETED_MESSAGE_PROCESSOR** , commands that are evaluated after each character are tagged with **IN_PROGRESS_MESSAGE_PROCESSOR** .
+CommandModules work very similarly to modules on the server that register [Command functions](#command-functions). These modules define functions that will fire after the user has entered in text. That text can be read and the command can either let the message through to the server or stop the progress of the message. The main difference is that CommandModules can be evaluated either when the user has hit **Enter**, or after every character as they are typed. Commands that are evaluated at the end of the message are tagged with **COMPLETED_MESSAGE_PROCESSOR** , and commands that are evaluated after each character are tagged with **IN_PROGRESS_MESSAGE_PROCESSOR** .
 
 In both types of commands, the module must return a dictionary that says what type of processor the command should use, and what function to execute when the processor is called. For example, a **Completed Message Processor** should take the form:
 
@@ -205,7 +205,7 @@ Command Modules.
 
 #### Completed Message Commands
 
-Completed Message Commands are evaluated when the user has finished typing and has hit "Enter". The function of the processor is passed the [ChatMessage](../../chat/legacy/server-side-chat-modules.md#chatmessage) object, the client's [ChatWindow](../../chat/legacy/client-side-chat-modules.md#chatwindow) , and the [ChatSettings](../../chat/legacy/client-side-chat-modules.md#chatsettings) table. If the function returns true, then the message stops being processed and will not be sent to the server. Otherwise it will be sent through all of the other processors and eventually to the server if none of the other processors stop it.
+Completed Message Commands are evaluated when the user has finished typing and has hit "Enter". The function of the processor is passed the [ChatMessage](../../chat/legacy/server-side-chat-modules.md#chatmessage) object, the client's [ChatWindow](../../chat/legacy/client-side-chat-modules.md#chatwindow) , and the [ChatSettings](../../chat/legacy/client-side-chat-modules.md#chatsettings) table. If the function returns true, then the message stops being processed and will not be sent to the server. Otherwise, it will be sent through all of the other processors and eventually to the server if none of the other processors stop it.
 
 For example, the following processor will remove the oldest message in the current channel if the user enters the command `/last`.
 
@@ -253,13 +253,13 @@ return {
 
 In Progress Commands are often used to make a custom state for the chat to send messages to specific users instead of just the current channel. For example, the Whisper and Team chat systems use In Progress Commands to see if the user has typed "/whisper" or "/team" respectively, and will send the finished message to only the appropriate users.
 
-A custom chat state overrides all other commands, either in-progress or completed. It will remain this way until ChatBar.ResetCustomState is called, which will remove the custom state and revert back to normal chat behavior.
+A custom chat state overrides all other commands, either in progress or completed. It will remain this way until ChatBar.ResetCustomState is called, which will remove the custom state and revert back to normal chat behaviour.
 
 A custom state is expected to be table with the following functions:
 
 - **TextUpdated** - called when the text in the input box changes.
 - **GetMessage** - called after the user has finished entering the message and hits **Enter**. This function is expected to return a string.
-- **ProcessCompletedMessage** - called as the message is being processed. A custom state processor will always fire before the Completed Message processors. Like other processors this function should return true if the message should stop being sent, otherwise it should return false.
+- **ProcessCompletedMessage** - called as the message is being processed. A custom state processor will always fire before the Completed Message processors. Like other processors this function should return true if the message should stop being sent, otherwise, it should return false.
 - **Destroy** - called after the message has been sent. Should be used to clean up anything setup by the custom state
 
 In order to use a Custom State, the **ProcessMessage** function of the Command Module must return the state. A basic custom state would take the following form:
@@ -482,7 +482,7 @@ local function CreateMessageLabel(messageData, channelName)
 	}
 	local FadeInFunction, FadeOutFunction, UpdateAnimFunction = util:CreateFadeFunctions(FadeParameters)
 
-	-- Return dictionary that defines the message label
+	-- Return the dictionary that defines the message label
 	return {
 		[util.KEY_BASE_FRAME] = BaseFrame,
 		[util.KEY_BASE_MESSAGE] = BaseMessage,
